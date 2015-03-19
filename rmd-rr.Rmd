@@ -1,0 +1,43 @@
+---
+title: "Publicando con R Markdown"
+author: "David Charte (@fdavidcl)"
+date: "Document Freedom Day - OSL"
+output:
+  beamer_presentation:
+    colortheme: dolphin
+    theme: Dresden
+subtitle: Una introducción en R Markdown
+---
+
+# Introducción
+
+## Investigación + Programación
+
+```{r, echo=F}
+
+```
+
+# knitr
+
+# R Markdown
+
+## Variantes de Markdown
+
+* PHP Markdown
+* Maruku
+* Kramdown
+* Pandoc Markdown
+* ...
+
+## ¿Qué es R Markdown?
+
+### R + Pandoc Markdown
+
+> * Lista incremental
+> * Dos
+
+
+# Markdown y otros lenguajes
+
+## Haskell
+
