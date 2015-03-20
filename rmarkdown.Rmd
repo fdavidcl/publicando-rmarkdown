@@ -39,5 +39,6 @@ subtitle: Una introducción en R Markdown
 
 # Markdown y otros lenguajes
 
-## Haskell
+## Haskell: Pandoc
 
+## Python: Pweave
