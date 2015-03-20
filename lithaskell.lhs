@@ -20,9 +20,17 @@ Ejemplo: Factorial
 ===========================
 
 La definición del factorial en Haskell es tan simple como se da en Matemáticas,
-de forma inductiva:
+de forma inductiva. Primero, observaremos que la función factorial lleva números
+enteros en números enteros ($!:\mathbb{Z}\rightarrow\mathbb{Z}$). Vamos a 
+expresar esto en Haskell:
 
 > fact :: Int -> Int
+
+A continuación realizaremos la definición inductiva del factorial de un número.
+Por convención decimos que el factorial de $0$ es $0!=1$, y que el factorial de
+algún número natural $n$ será el propio $n$ multiplicado por el factorial de
+su anterior, $n! = n(n-1)!$:
+
 > fact 0 = 1
 > fact n = n * fact (n - 1)
 
