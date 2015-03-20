@@ -13,9 +13,38 @@ subtitle: Una introducción en R Markdown
 
 ## Investigación + Programación
 
-```{r, echo=F}
+### Ciencia reproducible
 
+"En el *dataset* `iris`, podemos ver la relación entre el tamaño
+del pétalo y su especie:"
+
+```{r, echo=F, fig.height=5}
+data(iris)
+plot(Petal.Width ~ Petal.Length, data = iris, col = iris$Species)
 ```
+
+## Investigación + Programación
+
+### Programación literaria
+
+"Cargamos el *dataset* `iris`."
+```R
+data(iris)
+```
+
+"Vamos a representar la longitud del pétalo según
+su ancho, y colorearemos según la especie."
+```R
+plot(Petal.Width ~ Petal.Length, data = iris, 
+  col = iris$Species)
+```
+
+## Investigación + Programación
+
+> Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on **explaining to humans** what we want the computer to do. 
+
+> -- Donald E. Knuth, Literate Programming, 1984
+
 
 # knitr
 
