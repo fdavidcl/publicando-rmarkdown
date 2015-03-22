@@ -45,29 +45,74 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 > -- Donald E. Knuth, Literate Programming, 1984
 
+## Los inicios
+
+### WEB
+
+* Escrito por **Donald E. Knuth** para \TeX
+
+* Genera Pascal compilable
+
+* CWEB genera C
+
+* *TeX: The program*
+
+. . .
+
+![](texception.png)
+
+## Los inicios
+
+### noweb
+
+* Escrito por **Norman Ramsey**
+
+* Genera ejecutables de **cualquier lenguaje**
+
+* Permite \TeX, \LaTeX, HTML
 
 # knitr
+
+## Programación literaria en R
+
+* Archivos `.Rnw` con \LaTeX
+
+
 
 # R Markdown
 
 ## Variantes de Markdown
 
-* PHP Markdown
-* Maruku
-* Kramdown
+* [(PHP) Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)
+* Maruku, [Kramdown](http://kramdown.gettalong.org/)
 * Pandoc Markdown
 * ...
 
 ## ¿Qué es R Markdown?
 
-### R + Pandoc Markdown
-
-> * Lista incremental
-> * Dos
-
+### knitr + Pandoc Markdown
 
 # Markdown y otros lenguajes
 
 ## Haskell: Pandoc
 
 ## Python: Pweave
+
+## RMarkdown para todo
+
+```{r test-ruby, engine='ruby'}
+puts "Hello world, I'm Ruby #{RUBY_VERSION}!"
+```
+
+. . .
+
+```{r test-py, engine='python'}
+import platform
+print("Hi! I'm Python " + platform.python_version())
+```
+
+. . .
+
+```{r test-o, engine='node'}
+console.log("And I'm Node " + process.versions.node);
+```
