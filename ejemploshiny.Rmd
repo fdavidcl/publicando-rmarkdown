@@ -1,0 +1,20 @@
+---
+title: "Ejemplo de Shiny con R Markdown"
+author: "David Charte"
+date: "23/03/2015"
+output: html_document
+runtime: shiny
+---
+
+Un ejemplo de aproximación a la distribución normal de Gauss:
+
+```{r, echo=FALSE}
+inputPanel(
+  sliderInput("quantity", label = "Número de observaciones",
+              min = 1, max = 2000, value = 1, step = 2)
+)
+
+renderPlot({
+  hist(rnorm(input$quantity))
+})
+```
