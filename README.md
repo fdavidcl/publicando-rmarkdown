@@ -22,3 +22,12 @@ Los ejemplos de Haskell literario [`lithaskell.lhs`](https://github.com/fdavidcl
 y Python literario [`litpython.lpy`](https://github.com/fdavidcl/publicando-rmarkdown/blob/master/litpython.lpy)
 se pueden compilar ejecutando `make`, teniendo instalados *pandoc*, *ghc*, 
 *python* y *pweave*. También están [disponibles para descargar](https://github.com/fdavidcl/publicando-rmarkdown/releases/tag/0.1).
+
+## Licencia
+
+El archivo [`ejemploknitr.Rnw`](https://github.com/fdavidcl/publicando-rmarkdown/blob/master/ejemploknitr.Rnw),
+que utiliza la plantilla [*memoria*](https://github.com/M42/plantillas/blob/master/memoria/memoria.tex)
+de [M42](https://github.com/M42),
+se comparte bajo [CC BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+
+El resto de archivos se distribuyen bajo [Mozilla Public License](https://github.com/fdavidcl/publicando-rmarkdown/blob/master/LICENSE.md).
