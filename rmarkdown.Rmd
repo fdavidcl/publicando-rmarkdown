@@ -62,7 +62,7 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 . . .
 
-![](texception.png)
+![](assets/texception.png)
 
 ### noweb
 
@@ -82,7 +82,7 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 * Chunks `<<nombre, opciones>>=`...`@`
 
-![](rnw.png)
+![](assets/rnw.png)
 
 
 # R Markdown
@@ -102,7 +102,7 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 ### knitr + Pandoc Markdown
 
-![](rmdsite.png)
+![](assets/rmdsite.png)
 
 ## Escribiendo R Markdown
 
@@ -177,7 +177,7 @@ $$D(x)=
 * Referencias con `[@codref]`
 
 ### Aplicaciones Shiny
-![](shinyrmd.png)
+![](assets/shinyrmd.png)
 
 ### Plantillas
 
@@ -232,10 +232,10 @@ Parámetro `engine` del chunk. Opciones:
 
 GHC soporta Haskell literario (`.lhs`)
 
-![](lithaskell.png)
+![](assets/lithaskell.png)
 
 ### Python: Pweave
 
 `(sudo) pip install pweave`
 
-![](pweave.png)
+![](assets/pweave.png)

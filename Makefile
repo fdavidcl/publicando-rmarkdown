@@ -16,5 +16,8 @@ lithaskell: lithaskell.lhs
 
 lithaskell.pdf: lithaskell.lhs
 	pandoc --to latex --from markdown+lhs $< -o $@
-    
+
+clean:
+	rm -f *.pdf litpython.md
+
 .PHONY: lhs
