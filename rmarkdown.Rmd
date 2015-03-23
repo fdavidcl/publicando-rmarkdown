@@ -80,17 +80,22 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 * Archivos `.Rnw` con \LaTeX
 
+* Chunks `<<nombre, opciones>>=`...`@`
+
+![](rnw.png)
 
 
 # R Markdown
 
 ## 
 
-### Variantes de Markdown
+### Supersets de Markdown
 
 * [(PHP) Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)
-* Maruku, [Kramdown](http://kramdown.gettalong.org/)
+* [Kramdown](http://kramdown.gettalong.org/) (y Maruku, Redcarpet...)
 * Pandoc Markdown
+* Python Markdown
+* GitHub flavored Markdown
 * ...
 
 ## ¿Qué es R Markdown?
@@ -167,6 +172,21 @@ $$D(x)=
   
 \columnsend
 
+### Bibliografía
+* `bibliography: bibliography.bib` en YAML
+* Referencias con `[@codref]`
+
+### Aplicaciones Shiny
+![](shinyrmd.png)
+
+### Plantillas
+
+* Variable `template` en la caja YAML (o parámetro `--template`)
+
+* Entre `$...$`:
+    * Variables: `$title$`, `$theme$`...
+    * Estructuras de control: `$if(numbersections)$`, `$for(author)$`...
+
 # Markdown y otros lenguajes
 
 ## Desde R Markdown
@@ -190,8 +210,32 @@ print("Hi! I'm Python " + platform.python_version())
 console.log("And I'm Node " + process.versions.node);
 ```
 
+### R Markdown para todo
+
+Parámetro `engine` del chunk. Opciones:
+
+  * Rcpp
+  * bash
+  * coffee (CoffeeScript)
+  * ruby
+  * python
+  * haskell
+  * node (JavaScript)
+  * perl
+  * scala
+  * tikz
+  * ...
+
 ## Otras herramientas
 
 ### Haskell: Pandoc
 
+GHC soporta Haskell literario (`.lhs`)
+
+![](lithaskell.png)
+
 ### Python: Pweave
+
+`(sudo) pip install pweave`
+
+![](pweave.png)
