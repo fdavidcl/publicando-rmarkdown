@@ -105,6 +105,11 @@ $if(subsecslide)$
 }
 $endif$
 
+
+% http://stackoverflow.com/a/26069751
+\newcommand{\columnsbegin}{\begin{columns}}
+\newcommand{\columnsend}{\end{columns}}
+
 $if(strikeout)$
 \usepackage[normalem]{ulem}
 % avoid problems with \sout in headers with hyperref:

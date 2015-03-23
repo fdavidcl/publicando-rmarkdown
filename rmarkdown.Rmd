@@ -6,8 +6,11 @@ output:
   beamer_presentation:
     colortheme: dolphin
     theme: Dresden
+    template: beamer-template.tex
+compress: yes
 subtitle: Una introducción en R Markdown
 ---
+
 
 # Introducción
 
@@ -23,7 +26,7 @@ data(iris)
 plot(Petal.Width ~ Petal.Length, data = iris, col = iris$Species)
 ```
 
-## Investigación + Programación
+---------------
 
 ### Programación literaria
 
@@ -39,7 +42,7 @@ plot(Petal.Width ~ Petal.Length, data = iris,
   col = iris$Species)
 ```
 
-## Investigación + Programación
+--------------
 
 > Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on **explaining to humans** what we want the computer to do. 
 
@@ -61,8 +64,6 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 ![](texception.png)
 
-## Los inicios
-
 ### noweb
 
 * Escrito por **Norman Ramsey**
@@ -71,9 +72,11 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 * Permite \TeX, \LaTeX, HTML
 
-# knitr
+## knitr
 
-## Programación literaria en R
+### knitr
+
+* Programación literaria en R
 
 * Archivos `.Rnw` con \LaTeX
 
@@ -81,7 +84,9 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 # R Markdown
 
-## Variantes de Markdown
+## 
+
+### Variantes de Markdown
 
 * [(PHP) Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)
 * Maruku, [Kramdown](http://kramdown.gettalong.org/)
@@ -92,13 +97,81 @@ plot(Petal.Width ~ Petal.Length, data = iris,
 
 ### knitr + Pandoc Markdown
 
+![](rmdsite.png)
+
+## Escribiendo R Markdown
+
+### YAML
+
+~~~
+---
+title: Ejemplo de R Markdown
+author: Alice, Bob
+output: 
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+---
+~~~
+
+### Chunks
+
+\texttt{\`}\texttt{\`}\texttt{\`}\texttt{\{r, echo=FALSE, eval=TRUE\}}  
+`plot(rnorm(20, mean = 10, sd = 3))`  
+\texttt{\`}\texttt{\`}\texttt{\`}
+
+```{r, echo=FALSE, eval=TRUE, fig.height=5}
+plot(rnorm(20, mean = 10, sd = 3))
+```
+
+### Código en línea
+
+R permite insertar valores en una frase:
+
+\texttt{El número e vale \`}\texttt{r exp(1)}\texttt{\`}
+
+El número e vale `r exp(1)`
+
+### Ecuaciones
+
+#### En línea
+
+`Modo matemático en línea: $e^{i\tau} = 1$`  
+Modo matemático en línea: $e^{i\tau} = 1$
+
+. . .
+
+#### En bloque
+
+\columnsbegin
+
+\column{0.5\textwidth}
+
+
+```
+$$D(x)= 
+  \begin{cases}
+    0 & x \in\mathbb Q\\
+    1 & x \notin\mathbb Q
+  \end{cases}$$
+```
+
+\column{0.5\textwidth}
+
+$$D(x)= 
+  \begin{cases}
+    0 & x \in\mathbb Q\\
+    1 & x \notin\mathbb Q
+  \end{cases}$$
+  
+\columnsend
+
 # Markdown y otros lenguajes
 
-## Haskell: Pandoc
+## Desde R Markdown
 
-## Python: Pweave
-
-## RMarkdown para todo
+### R Markdown para todo
 
 ```{r test-ruby, engine='ruby'}
 puts "Hello world, I'm Ruby #{RUBY_VERSION}!"
@@ -116,3 +189,9 @@ print("Hi! I'm Python " + platform.python_version())
 ```{r test-o, engine='node'}
 console.log("And I'm Node " + process.versions.node);
 ```
+
+## Otras herramientas
+
+### Haskell: Pandoc
+
+### Python: Pweave
