@@ -8,14 +8,23 @@ Python literario
 ===========================
 
 Python es un lenguaje excelente para la creación de gráficos y para el cálculo
-simbólico, gracias a las librerías NumPy, SciPy y similares.
+simbólico, gracias a las librerías NumPy, SciPy y similares. Pweave funciona
+bien con estas librerías para producir documentos con los resultados adecuados.
 
-Probando algo:
+Vamos a escribir un sencillo ejemplo de Hello World. Primero, veamos la versión
+de Python con la que estamos trabajando.
+
+<<version>>=
+import platform
+print("This is Python " + platform.python_version())
+@
+
+Ahora definimos una función que genera un saludo para un nombre dado:
 
 <<helloworld>>=
 def greeting(name):
-    greetz = "Hello world #{name}"
+    greetz = "Hi there, " + name
     return greetz
     
-greeting("David")
+print(greeting("David"))
 @

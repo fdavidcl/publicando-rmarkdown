@@ -6,7 +6,7 @@ litpython.pdf: litpython.md
 	pandoc --to latex $< -o $@
 
 litpython.md: litpython.lpy
-	pweave $< -m -f pandoc
+	pweave $< -i noweb -f pandoc -m
 
 
 lhs: lithaskell.pdf lithaskell

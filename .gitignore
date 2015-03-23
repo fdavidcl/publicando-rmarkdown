@@ -54,3 +54,6 @@ acs-*.bib
 *.hi
 *.o
 lithsexample
+
+# R
+.Rhistory
