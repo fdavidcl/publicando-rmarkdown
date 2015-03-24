@@ -13,7 +13,7 @@ precedidas de símbolos `>`. Por ejemplo,
 
 ~~~markdown
  > main :: IO()
- > main = putStr "Hello World!"
+ > main = print "Hello World!"
 ~~~
 
 Ejemplo: Factorial
@@ -38,7 +38,7 @@ Ahora podemos preguntar a Haskell el factorial de cualquier número, ya que
 lo tiene definido para cualquier natural:
 
 > main :: IO()
-> main = putStr ((show (fact 10)) ++ "\n")
+> main = print (fact 10)
 
 Este archivo `.lhs` se puede compilar a LaTeX y a PDF desde `pandoc`:
 
